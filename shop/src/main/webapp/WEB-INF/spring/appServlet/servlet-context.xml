@@ -27,11 +27,11 @@
 	<interceptors>
 		<interceptor>
 			<mapping path="/member/login.do"></mapping>
-			<beans:bean id="LoginInterceptor" class="com.shop.interceptor.LoginInterceptor"></beans:bean>
+			<beans:bean id="loginInterceptor" class="com.shop.interceptor.LoginInterceptor"></beans:bean>
 		</interceptor>
 		<interceptor>
 			<mapping path="/admin/**"></mapping>
-			<beans:bean id="AdminInterceptor" class="com.shop.interceptor.AdminInterceptor"></beans:bean>
+			<beans:bean id="adminInterceptor" class="com.shop.interceptor.AdminInterceptor"></beans:bean>
 		</interceptor>
 	</interceptors>
 	
