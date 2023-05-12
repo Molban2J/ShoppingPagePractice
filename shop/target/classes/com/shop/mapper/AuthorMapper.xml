@@ -4,7 +4,36 @@
   "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.shop.mapper.AuthorMapper">
 	<insert id="authorEnroll">
-		insert into jm_author(authorId, authorName, nationId, authorIntro) 
+		insert into jm_author(authorId, authorName, nationId,
+		authorIntro)
 		values(author_seq.nextval,#{authorName},#{nationId},#{authorIntro} )
 	</insert>
+
+	<select id="authorList" resultType="com.shop.model.AuthorVO">
+	<![CDATA[
+		select * from(
+			select /*+INDEX_DESC(jm_author updateDate)*/
+				rownum as rn, authorId, authorName, nationId, regDate, updateDate 
+			from jm_author
+			where
+	]]>
+
+		<if test="keyword != null">
+			authorName like '%'||#{keyword}||'%' and
+		</if>
+		
+	<![CDATA[
+		rownum<= #{pageNum} * #{amount}
+		)
+		where rn > (#{pageNum} -1)* #{amount}
+	]]>
+
+	</select>
+	
+	<select id="authorTotal" resultType="int">
+		select count(*) from jm_author
+		<if test="keyword != null">
+			where authorName like '%'||#{keyword}||'%'
+		</if>
+	</select>
 </mapper>
