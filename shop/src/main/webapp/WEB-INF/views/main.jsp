@@ -37,7 +37,7 @@
 			</div>
 			<div class="top_area">
 				<div class="logo_area">
-					<h1>logo area</h1>
+					<a href="/main"><img src="resources/img/logo.png"></a>
 				</div>
 				<div class="search_area">
 					<h1>Search area</h1>
@@ -79,6 +79,41 @@
 			</div>
 			<div class="content_area">
 				<h1>content area</h1>
+			</div>
+			<!-- footer_nav 영역 -->
+			<div class="footer_nav">
+				<div class="footer_nav_container">
+					<ul>
+						<li>회사소개</li>
+						<span class="line">|</span>
+						<li>이용약관</li>
+						<span class="line">|</span>
+						<li>고객센터</li>
+						<span class="line">|</span>
+						<li>광고문의</li>
+						<span class="line">|</span>
+						<li>채용정보</li>
+						<span class="line">|</span>
+					</ul>
+				</div>
+			</div>
+			<!-- footer 영역 -->
+			<div class="footer">
+				<div class="footer_container">
+					<div class="footer_left">
+						<img src="resources/img/logo.png">
+					</div>
+					<div class="footer_right">
+						(주)BookShop		대표이사 : 임종민
+						<br>
+						사업자 등록번호 : 000-12-00000
+						<br>
+						대표전화 : 1588-1234(발신자 부담전화)
+						<br><br>
+						COPYRIGHT(C) <strong>molban2j.github.io</strong>	ALL RIGHTS
+					</div>
+					<div class="clearfix"></div>
+				</div>
 			</div>
 		</div>
 	</div>
